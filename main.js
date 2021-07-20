@@ -37,37 +37,30 @@ for (let i = 0; i < array3.length; i++) {
     console.log (array3[i]);
   }
 }
-
-function palindrome(str) {
-  return str === str.split('').reverse('').join('');
-}
+const palindrome = (str) => str === str.split('').reverse('').join('');
 console.log(palindrome('lol'));
 console.log(palindrome('capital'));
 
-function min(a, b) {
+const min = (a, b) => {
   if (a < b) {
     return a;
   }
   return b;
-}
+};
 console.log(min(4, 6));
 
-function minTernary(a, b) {
-  return (a < b) ? a : b
-}
+const minTernary = (a, b) => (a < b) ? a : b;
 console.log(minTernary(2, 8));
 
-function max(a, b) {
+const max = (a, b) => {
   if (a > b) {
     return a;
   }
   return b;
-}
+};
 console.log(max(4, 6));
 
-function maxTernary(a, b) {
-  return (a > b) ? a : b
-}
+const maxTernary = (a, b) => (a > b) ? a : b;
 console.log(maxTernary(5, 9));
 
 const arrayWithZero = [0, 15, 20, 33, 40, 100, 56, 80, 99, 41];

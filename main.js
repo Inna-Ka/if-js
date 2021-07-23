@@ -60,22 +60,9 @@ const max = (a, b) => {
 };
 console.log(max(4, 6));
 
-const maxTernary = (a, b) => (a > b) ? a : b;
-console.log(maxTernary(5, 9));
-
-const arrayWithZero = [0, 15, 20, 33, 40, 100, 56, 80, 99, 41];
-console.log(arrayWithZero);
-for (let i = 0; i < arrayWithZero.length; i++) {
-  if (arrayWithZero[i] % 10 === 0) {
-    arrayWithZero[i] /= 10;
-    if (arrayWithZero[i] / 10 === 0) {
-      arrayWithZero[i] = '';
-    }
-    if (arrayWithZero[i] / 10 === 1) {
-      arrayWithZero[i] /= 10;
-      arrayWithZero[i] += 'zero';
-    }
-    arrayWithZero[i] += 'zero';
-  }
+let arrayWithZero = [10, 12, 65, 22, 30, 40, 55, 89, 100, 5];
+function newArray(arrayWithZero) {
+  let newArray = arrayWithZero.map(item => item.toString().includes(0) ? item.toString().replace(/0/g, 'zero') : item);
+  return newArray;
 }
-console.log(arrayWithZero);
+console.log(newArray(arrayWithZero));

@@ -37,3 +37,32 @@ for (let i = 0; i < array3.length; i++) {
     console.log (array3[i]);
   }
 }
+const palindrome = (str) => str === str.split('').reverse('').join('');
+console.log(palindrome('lol'));
+console.log(palindrome('capital'));
+
+const min = (a, b) => {
+  if (a < b) {
+    return a;
+  }
+  return b;
+};
+console.log(min(4, 6));
+
+const minTernary = (a, b) => (a < b) ? a : b;
+console.log(minTernary(2, 8));
+
+const max = (a, b) => {
+  if (a > b) {
+    return a;
+  }
+  return b;
+};
+console.log(max(4, 6));
+
+let arrayWithZero = [10, 12, 65, 22, 30, 40, 55, 89, 100, 5];
+function newArray(arrayWithZero) {
+  let newArray = arrayWithZero.map(item => item.toString().includes(0) ? item.toString().replace(/0/g, 'zero') : item);
+  return newArray;
+}
+console.log(newArray(arrayWithZero));
